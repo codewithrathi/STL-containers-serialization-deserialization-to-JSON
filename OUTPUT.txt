@@ -1,0 +1,83 @@
+-------------------Serialize-------------------
+
+std::array: [1,2,3,4,5]
+std::deque: ["Test","Hallo","Welt","List"]
+std::map: {"Num1":5,"Num2":9,"Num4":8,"Num5":6}
+std::multimap: {"Test":[1,2,3],"Test1":[4,5],"Test2":[1]}
+std::unordered_map: {"Test4":4,"Test2":2,"Test":5}
+std::unordered_multimap: {"Test2":[1],"Test":[3,2,1],"Test1":[5,4]}
+std::vector: [3,35]
+
+-------------------Deserialize-------------------
+
+std::deque: Test,Hallo,Welt,List,
+std::forward_list: 5,3,2,7,
+std::list: 5,Welt,Test212312,Serial,
+std::map: Num1 5,Num2 9,Num4 8,Num5 6,
+std::multimap: Test 1,Test 2,Test 3,Test1 4,Test1 5,Test2 1,
+std::unordered_map: Test4 4,Test2 2,Test 5,
+std::unordered_multimap: Test2 1,Test 3,Test 2,Test 1,Test1 5,Test1 4,
+std::vector: 3,35,
+Serialize Primitives :
+PrimitiveTestClass: {"c":-1,"d":432.324324,"f":1.342323,"i":1048575,"l":1048575,"ld":423432.346544,"ll":1048575,"pc":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],"pd":[255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000],"pf":[255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000],"pi":[255,255,255,255,255,255,255,255,255,255],"pl":[255,255,255,255,255,255,255,255,255,255],"pld":[255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000,255.000000],"pll":[255,255,255,255,255,255,255,255,255,255],"ps":[255,255,255,255,255,255,255,255,255,255],"pto":[{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"}],"puc":[255,255,255,255,255,255,255,255,255,255],"pui":[255,255,255,255,255,255,255,255,255,255],"pul":[255,255,255,255,255,255,255,255,255,255],"pull":[255,255,255,255,255,255,255,255,255,255],"pus":[255,255,255,255,255,255,255,255,255,255],"s":-1,"spi":[10,10,10,10,10,10,10,10,10,10],"spto":[{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"},{"str":"Hello World!"}],"str":"Hello World!","uc":255,"ui":1048575,"ul":1048575,"ull":1048575,"us":65535}
+DeSerialize Primitives :
+PrimitiveTestClass: 
+c: -1
+uc: 255
+s: -1
+us: 65535
+i: 1048575
+ui: 1048575
+l: 1048575
+ul: 1048575
+ll: 1048575
+ull: 1048575
+f: 1.34232
+d: 432.324
+ld: 423432
+str: Hello World!
+pc: ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, 
+puc: ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, ÿ, 
+ps: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pus: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pi: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pui: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pl: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pul: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pll: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pull: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pf: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pd: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pld: 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
+pto: Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, 
+spi: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 
+spto: Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, Hello World!, 
+Serialize Object :
+Folder: {"files":[{"name":"Test.png","path":"\/home\/test\/Test","size":2048},{"name":"Test.txt","path":"\/home\/test\/Test","size":512},{"name":"Test.mp3","path":"\/home\/test\/Test","size":10000000}],"name":"Test","path":"\/home\/test"}
+DeSerialize Object :
+Name: Test
+Path: /home/test
+Name: Test.png
+Path: /home/test/Test
+Size: 2048
+Name: Test.txt
+Path: /home/test/Test
+Size: 512
+Name: Test.mp3
+Path: /home/test/Test
+Size: 10000000
+Case: missingquotes: The raised exception is equal the expected one! ENUM: MISSING_KEY
+Case: missingquotes2: The raised exception is equal the expected one! ENUM: MISSING_SEPERATOR
+Case: objectbeginmissing: The raised exception is equal the expected one! ENUM: INVALID_JSON_OBJECT
+Case: objectendmissing: The raised exception is equal the expected one! ENUM: INVALID_JSON_OBJECT
+Case: missingbracketarray: The raised exception is equal the expected one! ENUM: MISSING_KEY
+Case: missingbracketarray2: The raised exception is equal the expected one! ENUM: INVALID_JSON_OBJECT
+Case: wrongtypes: The raised exception is equal the expected one! ENUM: INVALID_CAST
+Case: missingcomma: The raised exception is equal the expected one! ENUM: MISSING_SEPERATOR
+Case: missingcolon: The raised exception is equal the expected one! ENUM: MISSING_SEPERATOR
+Case: missingcomma2: The raised exception is equal the expected one! ENUM: MISSING_SEPERATOR
+Case: objectinarray: The raised exception is equal the expected one! ENUM: MISSING_KEY
+Case: objectinarray2: The raised exception is equal the expected one! ENUM: INVALID_CAST
+Case: wrongplacedcomma: The raised exception is equal the expected one! ENUM: WRONG_PLACED_SEPERATOR
+Case: invalidcast: The raised exception is equal the expected one! ENUM: INVALID_CAST
+Case: nullptrkey: The raised exception is equal the expected one! ENUM: MISSING_KEY
